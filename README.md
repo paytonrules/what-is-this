@@ -1,1 +1,2 @@
-# My Lineman Application
+Check out my blog on this here:
+

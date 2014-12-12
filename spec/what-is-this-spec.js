@@ -14,14 +14,14 @@ describe("What Is This?", function() {
   it ("is the simple object context on method invocation", function() {
     a.thingToDo();
 
-    assert.equal(a.a, "thing");
+    assert.equal(a.a, _);
   });
 
   it("is the owning object context in a callback", function(done) {
     setTimeout(a.thingToDo, 1);
 
     setTimeout(function() {
-      assert.equal(a, "thing");
+      assert.equal(a, _);
       done();
     }, 5);
   });
@@ -32,7 +32,7 @@ describe("What Is This?", function() {
     }, 1);
 
     setTimeout(function() {
-      assert.equal(a.a, "thing");
+      assert.equal(a.a, _);
       done();
     }, 5);
   });
